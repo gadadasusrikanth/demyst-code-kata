@@ -1,10 +1,4 @@
-# Data Engineering Coding Challenges
 
-## Judgment Criteria
-
-- Beauty of the code (beauty lies in the eyes of the beholder)
-- Testing strategies
-- Basic Engineering principles
 
 ## Problem 1
 
