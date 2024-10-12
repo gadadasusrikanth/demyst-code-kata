@@ -22,5 +22,5 @@ def generate_csv(file_name, num_rows):
     print(f"CSV file '{file_name}' generated with {num_rows} rows.")
 
 # Generate a sample CSV file
-csv_file_name = 'data/problem2_csv_file.csv'
+csv_file_name = 'data/problem2_input_csv_file.csv'
 generate_csv(csv_file_name, num_rows=100)
