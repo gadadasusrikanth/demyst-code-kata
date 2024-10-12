@@ -1,6 +1,10 @@
 import csv
 import hashlib
 import multiprocessing
+import argparse
+
+parser = argparse.ArgumentParser()
+parser.add_argument("--input_file", required=True)
 
 def anonymize_chunk(chunk, chunk_index):
     #Anonymizes a given chunk of rows and writes it to a separate CSV file
@@ -32,7 +36,7 @@ def anonymize_data_parallel(filename, chunk_size, num_processes):
         print("Creating chunks and submitting them to multiple threads for parallel porocessing")
         
         with multiprocessing.Pool(num_processes) as pool:
-            print(f"Initiated pool : {pool}")
+            # print(f"Initiated pool : {pool}")
             i=0
             while True:
                 try:
@@ -52,11 +56,13 @@ def anonymize_data_parallel(filename, chunk_size, num_processes):
 
 if __name__ == "__main__":
 
-    file_name = "data/problem2_input_csv_file.csv" 
+    # file_name = "data/problem2_input_csv_file.csv" 
+    args = parser.parse_args()
+    input_file = args.input_file
 
     # file_size_bytes = os.path.getsize(file_name)
     # file_size_mb = file_size_bytes / (1024 ** 2)  # Convert to megabytes
     # print("File size:", file_size_mb, "MB")
 
     #chunk size will be changed based on input csv file size
-    anonymize_data_parallel(filename=file_name, chunk_size=100, num_processes=4)
+    anonymize_data_parallel(filename=input_file, chunk_size=100, num_processes=4)
