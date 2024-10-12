@@ -1,4 +1,3 @@
-import csv
 import random
 from faker import Faker
 import json
@@ -33,16 +32,7 @@ def generate_random_data(spec_offsets):
     return data, row_width
 
 def generate_fixed_width_file(spec, spec_offsets, data):
-    """Generates a fixed-width text file based on the given spec and data.
-    Args:
-    spec: A dictionary containing the following keys:
-        - `ColumnNames`: A list of column names.
-        - `Offsets`: A list of offsets for each column.
-        - `FixedWidthEncoding`: The encoding for the fixed-width file.
-        - `IncludeHeader`: Whether to include a header row.
-        - `DelimitedEncoding`: The encoding for the delimited file.
-    data: rows of data.
-    """
+    # Generates a fixed-width text file based on the given spec and data
 
     file_content = io.StringIO()
 

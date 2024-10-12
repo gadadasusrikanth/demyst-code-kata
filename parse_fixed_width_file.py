@@ -21,7 +21,6 @@ def parse_fixedwidth_file(spec_file, fixed_file, csv_file):
 
     print(f"CSV file generated: {csv_file} successfully from fixedwidth file")
 
-# Example usage
 if __name__ == "__main__":
     # Passing the required arguments
     args = parser.parse_args()
