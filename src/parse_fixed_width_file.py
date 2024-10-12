@@ -1,5 +1,5 @@
 import argparse
-from src.fixedwidth_parser import fixedwidth_parser
+from common.fixedwidth_parser import fixedwidth_parser
 
 parser = argparse.ArgumentParser()
 parser.add_argument("--spec_file", required=True)
