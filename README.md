@@ -24,7 +24,22 @@
 - Demonstrate that the same can work on bigger dataset
 - Hint - You would need some distributed computing platform
 
-## Choices
+## Execution Instructions
 
-- Any language, any platform
-- One of the above problems or both, if you feel like it.
+Build docker image
+
+```console
+./dockerbuild.sh
+```
+
+Run problem 1 solution code
+
+```console
+./dockerrun.sh
+```
+
+Run problem 2 solution code
+
+```console
+./dockerrun2.sh
+```
