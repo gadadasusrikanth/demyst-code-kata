@@ -1,6 +1,6 @@
 FROM python:3.11-slim
 
-VOLUME data
+VOLUME staging_data
 WORKDIR /app
 
 COPY requirements.txt requirements.txt
